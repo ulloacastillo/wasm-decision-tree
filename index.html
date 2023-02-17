@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Decision Tree Rust</title>
+    
+  </head>
+  <body>
+    
+    <script type="module">
+        import init, {main} from './pkg/wasm_dtree.js';
+        import data from './src/data.js'
+        async function run() {
+            
+            const mod = await init();
+            console.log(main(data));
+            console.log("DAS");
+            
+        }
+
+        run();
+    </script>
+  </body>
+</html>
